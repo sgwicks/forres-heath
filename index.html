@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodmin Moor</title>
+  <script src="spells.js" defer></script>
+  <link rel="stylesheet" href="scenery.css">
+</head>
+<body>
+  <h1>Forres Heath</h1>
+  <p>This is a puzzle game designed to teach and embed the use of browser developer tools.</p>
+  <h2>Key Points</h2>
+  <details>
+    <summary>A reminder of what dev tools can do</summary>
+    <ul>
+      <li>Most browsers can open Dev Tools using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> (or <kbd> &#8984; Cmd</kbd>+<kbd>&#8997; Option</kbd>+<kbd>I</kbd> on Mac)</li>
+      <ul>
+        <li>You can also quickly access the Inspector tab of Dev Tools by right-clicking on a website and selecting "Inspect"</li>
+      </ul>
+      <li>The Inspector tab allows you to view the HTML of a page</li>
+      <ul>
+        <li>You can view the Box Model, Flex and Grid layouts</li>
+        <li>You can even alter HTML inline, including id, class and css rules!</li>
+      </ul>
+      <li>The Console tab allows you to view the browser's Javascript console</li>
+      <ul>
+        <li>Any Javascript errors and warnings from the webpage will show up in the console</li>
+        <li>You can write and run any Javascript you like in here, even from the website's own script files</li>
+      </ul>
+      <li>The Network tab allows you to view all the HTTP requests made by the webpage</li>
+      <ul>
+        <li>Each Network request is split into multiple tab displaying, among other things, Headers, the original Request and any Response it receives</li>
+        <li>This is particularly useful if you know the webpage is communicating with an API, but it isn't displaying the full results to you</li>
+      </ul>
+      <li>Dev Tools allows you to switch into a mobile-like view "Responsive Design Mode"</li>
+      <ul>
+        <li>In this view you can quickly change the resolution and orientation of the web page to test different media queries</li>
+        <li>This will also send appropriate mobile viewport headers on requests you make while in this view! Useful for testing mobile-specific designs</li>
+      </ul>
+    </ul>
+  </details>
+  <h2>The Puzzle</h2>
+  <p><sub>Content copied shamelessly from <a href="https://www.bbc.co.uk/bitesize/guides/z8qp9qt/revision/1" target="_blank">BBC Bitesize revision</a></sub></p>
+  <button onclick="castSpell()">Cast a Spell</button>
+  <p>Macbeth has remained one of William Shakespeare's most intense and of<em>t</em>en performed plays. The play follows the progress of the title character as he becomes increasingly powerful, using any means to get what he wants - even murder! He is encouraged by the ruthless and bloodthirsty ambition of his wife, Lady Macbeth. However, power comes at a price and by the end of the play, Macbeth's world falls apart around him, he is defeated and a new king, Malcolm, is declared.</p>
+  <h3>Key plot detail</h3>
+  <ol>
+    <li>While returning from a battle victory, Macbeth, a powerful lord, meets three Witches who predict <strong>t</strong>hat he will become King of Scotland.</li>
+    <li>Macbeth tells his wife of the Witches' predictions and she encourages him to murder the current king, Duncan, who is staying with them as a guest.</li>
+    <li>After Macduff discovers the murder, Duncan's sons flee the country, leaving the way clear for Macbeth to become king.</li>
+    <li>Banquo, Macbeth's best friend, becomes suspicious of what his friend has done so Macbeth has him murdered too.</li>
+    <li>Macbeth pays a second visit to the Witches and receives more predictions.</li>
+    <li>In England, Malcolm (Duncan's elder son) and his chief supporter, Macduff, plan to invade Scotland to win back the throne. An enraged Macbeth has Macduff's wife and children killed; Macduff swears revenge.</li>
+    <li>Lady Macbeth suffers from guilt for what she has done and eventually commits suicide.</li>
+    <li>Malcolm's invasion is successful and Macduff kills Macbeth. Malcolm becomes the new King of Scotland and the country counts the cost of Macbeth's sho<strong>r</strong>t but bloody reign.</li>
+  </ol>
+  <p>Macbeth is a play about how ambition and the love of power can destroy someone and those around them.</p>
+  <h3>A fateful meeting</h3>
+  <p>Macbeth, the powerful Thane of Glamis, has led the Scottish army of King Duncan to victory against an invading force and has personally fought bravely. As he returns from the battle with his best friend, Banqu<em>o</em>, they meet three Witches. They predict that Macbeth will be made Thane of Cawdor (a more powerful position than that he currently holds) and eventually become King of Scotland. They also tell Banquo that although he will never be king, his descendants will; the Witches then vanish. Almost immediately, Macbeth receives the news that in gratitude for leading his troops to victory Duncan is making him Thane of Cawdor. Macbeth begins to wonder whether this means the other predictions will come true as well.</p>
+  <h3>Murder!</h3>
+  <p>Duncan is due to stay with the Macbeths as a house guest. When Lady Macbeth receives Macbeth's news in a letter, she resolves to make the most of the situation. Macbeth and his wife plan and carry out Duncan's murder. When Macbeth hesitates, his wife enc<strong>o</strong>urages him; she even takes part in the action. They try to cover up their deed by making it seem as if the King's servants are responsible. The following morning, Macduff, the Thane of Fife, discovers the King's body. In the confusion that follows, Macbeth kills Duncan's innocent guards so that they cannot talk. Malcolm and Donalbain, the king's sons, flee the country and the way is left clear for Macbeth to seize the throne.</p>
+  <h3>A guilty conscience</h3>
+  <p>Despite being King, Macbeth does not feel secure, especially when he thinks about the Witches' prediction that Banq<strong>u</strong>o's descendants and not his own will be kings in the future. Banquo is suspicious of Macbeth's part in Duncan's death so Macbeth arranges for some hired murderers to kill Banquo and his son Fleance. They murder Banquo but Fleance escapes. Macbeth is furious but can do nothing. Later, at a banquet, Banquo's blood-stained ghost appears to Macbeth. Only he can see the ghost and the rest of the court begin to wonder whether Macbeth is going mad.</p>
+  <h3>More predicitions</h3>
+  <p>Macbeth decides to consult the Witches again. They show him visions which tell Macbeth:</p>
+  <div><div id="secret">
+    <p id="bigger">Try something a little bigger</p>
+    <button onclick="reveal()">Reveal the magic words</button>
+    <p id="smaller">Try something a little smaller</p>
+  </div></div>
+    
+    <ul>
+      <li>to beware of Macduff</li>
+      <li>that he cannot be harmed by anyone born of a woman</li>
+      <li>that he is safe until Birnam Wood moves to Dunsinane Hill</li>
+    </ul>
+  <p>As the second and third predictions are logically and physically impossible, Macbeth feels relatively safe. However, he learns that Macduff has gone to join Malcolm in England. Angered by what he sees as Macduff's treachery, he orders Macduff's castle to be seized and the Macduff family to be slaughtered. A devastated Macduff swears revenge on Mac<strong>b</strong>eth and vows to support Malcolm in regaining the Scottish throne.</p>
+  <h3>Consequences</h3>
+  <p>Ever since Duncan's death, Lady Macbeth's conscience has been troubling her. She has taken to sleepwalking and tr<em>i</em>es to wash her hands clean of imaginary blood. She eventually dies; it is suggested by Malcolm later that she kills herself, but Macbeth seems almost too preoccupied to notice.</p>
+  <p>Malcolm and Macduff's invasion begins; Macbeth still thinks he is protected by the Witches' predictions but he is wrong. When the invading army cut down the trees in Birnam Wood to use as camouf<strong>l</strong>age, as they move to Macbeth's castle in Dunsinane, it seems as though the trees themselves are moving.</p>
+  <p>Macduff com<strong>e</strong>s face-to-face with Macbeth in battle. Macbeth boasts that Macduff cannot harm him but Macduff declares that he was not born naturally (but by Caesarean section). The two men fight and Macduff kil<em>l</em>s and then beheads Macbeth. Malcolm is declared the new king of Scotland.</p>
+</body>
+</html>
