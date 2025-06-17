@@ -38,5 +38,5 @@ router.get('/favicon.ico', function (req, res) {
 app.use('/forres-heath', router)
 
 const listener = app.listen(process.env.PORT, function () {
-  console.log('Forres Heath is listening on port ' + listener.address().PORT)
+  console.log('Forres Heath is listening on port ' + listener.address().port)
 })
