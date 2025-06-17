@@ -1,14 +1,18 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
 app.use(express.static('public'))
 app.use(express.json())
 
-app.get('/', function (req, res) {
+// Handle existing on a subdomain
+const router = express.Router()
+
+router.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/bubble-bubble', function (req, res) {
+router.get('/bubble-bubble', function (req, res) {
   const { toil, trouble } = req.query
 
   if(typeof(toil) == 'string' && typeof(trouble) == 'string') {
@@ -18,7 +22,7 @@ app.get('/bubble-bubble', function (req, res) {
   }
 })
 
-app.get('/ingredients', function (req, res) {
+router.get('/ingredients', function (req, res) {
   res.json({ ingredients: [
     "Your first ingredient will be the EMphasis of your spell",
     "Your second ingredient will make your spell STRONG",
@@ -26,8 +30,13 @@ app.get('/ingredients', function (req, res) {
   ]})
 })
 
-app.get('/favicon.ico', function (req, res) {
+router.get('/favicon.ico', function (req, res) {
   res.status(200)
 })
 
-app.listen(5454)
+// Assign router to the subdomain
+app.use('/forres-heath', router)
+
+const listener = app.listen(process.env.PORT, function () {
+  console.log('Forres Heath is listening on port ' + listener.address().PORT)
+})
